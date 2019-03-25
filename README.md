@@ -1,6 +1,6 @@
 # Fresh
 
-* Goal: Give people the ability to search for barbers in their neighborhood by location and barber name.
+* Goal: Nowadays barbers work at barbershops or anywhere else they can set up shop (i.e their/your apartment). Fresh is allowing Barbers to stay on the radar of potential customers. We give people the ability to search for barbers in their neighborhood by location and name.
 
 ## Technologies Used
 
