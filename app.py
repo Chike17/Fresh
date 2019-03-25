@@ -152,23 +152,7 @@ def barbers(id=None):
       q_name = request.args.get('name')
       neighborhood = neighborhoods_by_key.get(neighborhood_code)
       q_neighborhood = neighborhood.name
-
-      print(q_name, '888888888888')
-      print(q_name, '888888888888')
-      print(q_name, '888888888888')
-      print(q_name, '888888888888')
-      print(q_name, '888888888888')
-
-      print(q_neighborhood, '999999999')
-      print(q_neighborhood, '999999999')
-      print(q_neighborhood, '999999999')
-      print(q_neighborhood, '999999999')
-      print(q_neighborhood, '999999999')
-
-
-      # barbers = models.Barber.select().limit(100)
       barbers = models.Barber.select().where((models.Barber.name == q_name) & (models.Barber.neighborhood == q_neighborhood))
-      
     return render_template('barbers.html', barbers=barbers, form=form, neighborhood=neighborhood)
   else:
     barber_param = int(id)
@@ -192,7 +176,6 @@ def delete_review(barberid, id):
   else:
     neighborhood_code = request.args.get('neighborhood')
   neghborhood = neighborhoods_by_key.get(neighborhood_code)
-
   review_param = int(id)
   barber_param = int(barberid)
   review = models.Review.get_or_none(review_param)
@@ -258,5 +241,3 @@ if __name__ == '__main__':
   except ValueError:
     pass
   app.run(debug=DEBUG, port=PORT)
-
-  
